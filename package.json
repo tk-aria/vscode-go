@@ -84,6 +84,7 @@
     "ts-loader": "^7.0.5",
     "tslint": "^6.1.1",
     "typescript": "^3.8.3",
+    "vsce": "^1.100.1",
     "vscode-test": "^1.3.0",
     "yarn": "^1.22.4"
   },
@@ -1280,9 +1281,9 @@
           "description": "Environment variables that will be passed to the process that runs the Go tests",
           "scope": "resource"
         },
-        "go.testEnvFile": {
-          "type": "string",
-          "default": null,
+        "go.testEnvFiles": {
+          "type": "object",
+          "default": {},
           "description": "Absolute path to a file containing environment variables definitions. File contents should be of the form key=value.",
           "scope": "resource"
         },

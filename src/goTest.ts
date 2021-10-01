@@ -238,7 +238,7 @@ async function debugTestAtCursor(
 		mode: 'test',
 		program: path.dirname(editor.document.fileName),
 		env: goConfig.get('testEnvVars', {}),
-		envFile: goConfig.get('testEnvFile'),
+		envFile: goConfig.get('testEnvFiles'),
 		args,
 		buildFlags: buildFlags.join(' ')
 	};

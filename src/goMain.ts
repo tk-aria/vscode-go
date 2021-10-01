@@ -481,7 +481,7 @@ If you would like additional configuration for diagnostics from gopls, please se
 				e.affectsConfiguration('go.alternateTools') ||
 				e.affectsConfiguration('go.gopath') ||
 				e.affectsConfiguration('go.toolsEnvVars') ||
-				e.affectsConfiguration('go.testEnvFile')
+				e.affectsConfiguration('go.testEnvFiles')
 			) {
 				updateGoVarsFromConfig();
 			}

@@ -100,11 +100,11 @@ export function getTestEnvVars(config: vscode.WorkspaceConfiguration): any {
 	const testEnvConfig = config['testEnvVars'] || {};
 
 	let fileEnv: { [key: string]: any } = {};
-	let testEnvFile = config['testEnvFile'];
-	if (testEnvFile) {
-		testEnvFile = resolvePath(testEnvFile);
+	let testEnvFiles = config['testEnvFiles'];
+	if (testEnvFiles) {
+		testEnvFiles = resolvePath(testEnvFiles);
 		try {
-			fileEnv = parseEnvFile(testEnvFile);
+			fileEnv = parseEnvFile(testEnvFiles);
 		} catch (e) {
 			console.log(e);
 		}
